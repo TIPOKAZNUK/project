@@ -32,7 +32,7 @@ const createPhoto = () => {
         url: `photos/${getRandomNumber(1, 25)}.jpg`,
         description: 'Описание',
         likes: getRandomNumber(15, 200),
-        comments: createComments()
+        comments: Array.from({length:getRandomNumber(1, 25)}, createComments)
     }
 };
 
