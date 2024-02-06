@@ -30,9 +30,12 @@ const createPhoto = () => ({
   description: 'Описание',
   likes: getRandomNumber(15, 200),
   comments: Array.from({length:getRandomNumber(1, 25)}, createComments)
+
 });
 
 const similarPhoto = Array.from({length: 25}, createPhoto);
 
 // eslint-disable-next-line no-console
 console.log(similarPhoto);
+
+export {similarPhoto};

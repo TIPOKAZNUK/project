@@ -9,4 +9,6 @@ const getRandomArrayElement = (elements) => elements[getRandomPositiveInteger(0,
 
 const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-export {getRandomArrayElement, getRandomNumber};
+const isEscEvent = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
+
+export {getRandomArrayElement, getRandomNumber, isEscEvent};
