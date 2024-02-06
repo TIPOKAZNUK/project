@@ -1,4 +1,3 @@
-// gallery.js
 import { similarPhoto } from './data.js';
 import { openBigPicture } from './big_picture.js';
 
@@ -8,7 +7,10 @@ const picturesContainer = document.querySelector('.pictures');
 const renderPicture = (photo) => {
   const pictureElement = pictureTemplate.cloneNode(true);
 
-  pictureElement.querySelector('.picture__img').src = photo.url;
+  const imgElement = pictureElement.querySelector('.picture__img');
+  imgElement.src = photo.url;
+  imgElement.alt = photo.description;
+
   pictureElement.querySelector('.picture__likes').textContent = photo.likes;
   pictureElement.querySelector('.picture__comments').textContent = photo.comments.length;
 

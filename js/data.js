@@ -1,4 +1,4 @@
-import {getRandomArrayElement, getRandomNumber} from './util.js';
+import { getRandomArrayElement, getRandomNumber } from './util.js';
 
 const commentsText = [
   'Всё отлично!',
@@ -9,19 +9,13 @@ const commentsText = [
   'Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!'
 ];
 
-const names = [
-  'Арсен',
-  'Денис',
-  'Костя',
-  'Маша',
-  'Вика'
-];
+const names = ['Арсен', 'Денис', 'Костя', 'Маша', 'Вика'];
 
 const createComments = () => ({
   id: getRandomNumber(1, 100),
   avatar: `img/avatar-${getRandomNumber(1, 6)}.svg`,
   message: getRandomArrayElement(commentsText),
-  name: getRandomArrayElement(names),
+  name: getRandomArrayElement(names)
 });
 
 const createPhoto = () => ({
@@ -29,13 +23,12 @@ const createPhoto = () => ({
   url: `photos/${getRandomNumber(1, 25)}.jpg`,
   description: 'Описание',
   likes: getRandomNumber(15, 200),
-  comments: Array.from({length:getRandomNumber(1, 25)}, createComments)
-
+  comments: Array.from({ length: getRandomNumber(1, 25) }, createComments)
 });
 
-const similarPhoto = Array.from({length: 25}, createPhoto);
+const similarPhoto = Array.from({ length: 25 }, createPhoto);
 
 // eslint-disable-next-line no-console
 console.log(similarPhoto);
 
-export {similarPhoto};
+export { similarPhoto };

@@ -11,4 +11,4 @@ const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)
 
 const isEscEvent = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
 
-export {getRandomArrayElement, getRandomNumber, isEscEvent};
+export { getRandomArrayElement, getRandomNumber, isEscEvent };
