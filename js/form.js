@@ -1,9 +1,9 @@
 const form = document.querySelector('.img-upload__form');
 
 const pristine = new Pristine(form, {
-  classTo: 'img-upload__element',
-  errorTextParent: 'img-upload__element',
-  errorTextClass: 'img-upload__error',
+  classTo: 'img-upload__hashtags',
+  errorTextParent: 'img-upload__hashtags',
+  errorTextClass: 'img-upload__form__error-text',
 });
 
 const hashtagField = document.querySelector('.text__hashtags');
