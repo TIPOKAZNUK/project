@@ -12,5 +12,8 @@
   "scripts": {
     "start": "browser-sync start --server --no-ui --files \"js/**/*.js\"",
     "lint": "eslint js/"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
   }
 }
